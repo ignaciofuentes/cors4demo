@@ -21,7 +21,7 @@ namespace MvcApplication2.App_Start
             // from the http://foo.com origin.
             corsConfig
                .ForResources("Values")
-               .ForOrigins("http://foo.com")
+               .ForOrigins("http://foo.com", "http://run.jsbin.com")
                .AllowAll();
         }
     }
