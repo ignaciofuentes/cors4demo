@@ -7,6 +7,10 @@ using System.Web.Http;
 
 namespace MvcApplication2.Controllers
 {
+    public class Person {
+        public string Name { get; set; }
+    }
+
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -22,8 +26,10 @@ namespace MvcApplication2.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public string Post(Person person)
         {
+            return person.Name;
         }
 
         // PUT api/values/5
